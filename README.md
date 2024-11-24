@@ -1,3 +1,5 @@
+Simple Calculator
+
 A basic, user-friendly calculator built using HTML, CSS, and JavaScript. This calculator allows users to perform simple arithmetic operations with an intuitive interface.
 
 Technologies Used
