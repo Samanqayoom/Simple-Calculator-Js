@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet"  href="style.css">
+</head>
+<body>
+  <h1 >Simple Calculator</h1>
+  <div class="container">
+   
+      <input type="text" id="input1" value="0">
+      <div class="button">
+
+    <button onClick="clearDisplay()" id="bt">C</button>
+    <button onClick="getValue('/')" id="btn4" value="/">/</button>
+    <button onClick="getValue('*')" id="btn8" value="*">*</button>
+   
+    <button onClick="DelValue()" id="btn16" value="x">DEL</button>
+    <button onClick="getValue('1')" id="btn1" class="btn" value="1">1</button>
+    <button onClick="getValue('2')" id="btn2" class="btn" value="2">2</button>
+    <button onClick="getValue('3')" id="btn3" value="3" class="btn">3</button>
+
+    <button onClick="getValue('-')" id="btn12" value="-">-</button>
+   
+    <button onClick="getValue('4')" id="btn5" value="4">4</button>
+    <button onClick="getValue('5')" id="btn6" value="5">5</button>
+    <button onClick="getValue('6')" id="btn7" value="6">6</button>
+  
+    <button onClick="getValue('%')" id="btn14" value="%">%</button>
+    <button onClick="getValue('7')" id="btn9" value="7">7</button>
+    <button onClick="getValue('8')" id="btn10" value="8">8</button>
+    <button onClick="getValue('9')" id="btn11" value="9">9</button>
+    <button onClick="getValue('+')" id="btn14" value="+">+</button>
+    <button onClick="getValue('.')" id="btn14" value=".">.</button>
+
+    <button onClick="getValue('0')" id="btn13" value="0">0</button>
+    
+    <button onClick="calculate()" id="btn15" value="=">=</button>
+    
+
+
+      </div>
+     
+        </div>
+  
+  <script>
+  
+      let result='';
+      function getValue(value) {
+
+        const n1 = document.getElementById("input1").value += value;
+
+      }
+
+      function clearDisplay() {
+
+        document.getElementById("input1").value= '';
+      }
+       
+       function calculate()
+       {
+        
+         
+         var a=document.getElementById("input1").value;
+         var result=eval(a);
+         document.getElementById("input1").value=result;
+          
+
+       }
+
+       function DelValue()
+       {
+        let val=document.getElementById("input1").value.slice(0,-1);
+        document.getElementById("input1").value=val;
+       }
+      </script>
+</body>
+</html>
+
+
+
+
